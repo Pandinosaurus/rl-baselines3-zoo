@@ -1,6 +1,7 @@
 """
 Send multiple jobs to the cluster.
 """
+
 import os
 import subprocess
 import time
@@ -33,9 +34,9 @@ for algo in ALGOS:
                     log_folder,
                     "-uuid",
                 ]
-                args = list(map(str, args))
+                arg_str_list: list[str] = list(map(str, args))
 
-                command = " ".join(["python", "-u", "train.py"] + args)
+                command = " ".join(["python", "-u", "train.py", *arg_str_list])
 
                 ok = subprocess.call(["sbatch", "cluster_torchy.sh", algo, env_id, "ablation", command])
                 time.sleep(0.05)

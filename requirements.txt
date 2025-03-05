@@ -1,18 +1,12 @@
-gym>=0.17,<0.20
-stable-baselines3[extra,tests,docs]>=1.3.0
-sb3-contrib>=1.3.0
+gym==0.26.2
+stable-baselines3[extra,tests,docs]>=2.6.0a2,<3.0
 box2d-py==2.3.8
-pybullet
-gym-minigrid
-scikit-optimize
-optuna
-pytablewriter
-seaborn
-pyyaml>=5.1
-cloudpickle>=1.5.0
-# tmp fix: ROM missing in newest release
-atari-py==0.2.6
+pybullet_envs_gymnasium>=0.6.0
+# minigrid
+cloudpickle>=2.2.1
+# optuna plots:
 plotly
-panda-gym==1.1.1 # tmp fix: until compatibility with panda-gym v2
-# rliable requires python 3.7+
-# rliable>=1.0.5
+# need to upgrade to gymnasium:
+# panda-gym~=3.0.1
+wandb
+moviepy>=1.0.0
